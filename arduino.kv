@@ -1,0 +1,98 @@
+#:import random random.random
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+#:import SwapTransition kivy.uix.screenmanager.SwapTransition
+#:import WipeTransition kivy.uix.screenmanager.WipeTransition
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import RiseInTransition kivy.uix.screenmanager.RiseInTransition
+#:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+
+
+<WeatherData>:
+    hue: random()
+    canvas:
+        Color:
+            hsv: self.hue, .5, .3
+        Rectangle:
+            size: self.size
+
+    BoxLayout:
+        size_hint: .5, None
+        height: 250
+        pos_hint: {'center_x': .5, 'top':1}
+        orientation: 'vertical'
+
+        GridLayout:
+            cols:2
+            Label:
+                text: 'Temperature'
+            Button:
+                id: temp1
+                text: ''
+
+
+            Label:
+                text: 'Humidity'
+            Button:
+                id: humidity
+                text: ''
+
+
+            Label:
+                text: 'Dewpoint'
+            Button:
+                id: dewpoint
+                text: ''
+
+
+            Label:
+                text: 'Pressure'
+            Button:
+                id: pressure
+                text: ''
+
+
+            Label:
+                text: 'Light'
+            Button:
+                id: light
+                text: ''
+
+
+            Label:
+                text: 'Wind Speed'
+            Button:
+                id: wind_speed
+                text: ''
+
+
+            Label:
+                text: 'Wind Direction'
+            Button:
+                id: wind_direction
+                text: ''
+
+
+            Label:
+                text: 'Rainfall'
+            Button:
+                id: rainfall
+                text: ''
+
+
+            Label:
+                text: 'Date'
+            Button:
+                id: date
+                text: ''
+
+            Label:
+                text: 'Time'
+            Button:
+                id: time
+                text: ''
+
+
+        
+
+        
